@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens flexíveis, aúdios e vídeos</h1>
+    <h2>Imagens flexíveis</h2>
+    <p>Vamos testar a flexibilidade das imagens, tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <picture>
+        <!--IMPORTANTE: o <source> deve ser do menor para o maior para que não haja bugs-->
+        <source media="(max-width:750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width:1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="A imagen flexível funciona"> 
+    </picture>
+    
+    <h2>Aúdios</h2>
+    <p>Vamos aprender a adicionar um aúdio no site</p>
+    <!--IMPORTANTE: PRE-LOAD indica se o aúdio será pré-carregado ou não-->
+    <!--IMPORTANTE: CONTROLS vai apresentar o player na tela e deve ser colocado na tag audio se não não aparecerá para o usuário-->
+    <!--IMPORTANTE: AUTOPLAY vai iniciar a reprodução do aúdio assim que a página for carregada -->
+    <!--IMPORTANTE: LOOP vai fazer com que o aúdio seja repetido eternamente -->
+    <audio preload="metadata" controls autoplay >
+        <source src="midia/08 - HOJE TEM REVOADA - JAPÃOZIN.mp3" type="audio/mpeg">
+        <source src="midia/08 - HOJE TEM REVOADA - JAPÃOZIN.ogg" type="audio/ogg">
+        <source src="midia/08 - HOJE TEM REVOADA - JAPÃOZIN.wav" type="audio/wav">
+        <p>Se seu navegador não suporta aúdio <a href="midia/08 - HOJE TEM REVOADA - JAPÃOZIN.mp3" type="audio/mpeg"></a></p>
+    </audio>
+</body>
+</html>
