@@ -10,15 +10,18 @@
             background-image: url("imagens/espaco.jpg");
             background-repeat: no-repeat;
         }
-        img{ 
+        #conteudo{ 
+            background-image: url("imagens/astronauta.png");
             position: absolute;
-            margin: auto;
-            right: 50vh;
-            left: 50vh;
+            width: 500px;
+            height: 500px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         </style>
 </head>
 <body>
-    <img src="imagens/astronauta.png" alt="astronauta">
+    <div id="conteudo"></div>
 </body>
 </html>
